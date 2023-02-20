@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router';
 import { apiNextURl } from '../../api'
 import { deleteCookie } from '../../utils'
-import Header from '../../shared/header';
+import Header from '../../shared/header/header';
 import Customers from './customers';
 
 export default function Session() {
@@ -49,8 +49,9 @@ export default function Session() {
   return (
     <div >
       <Header />
-      <Customers />
-
+      <div className="wrapper"
+      >     <Customers />
+      </div>
     </div>
   )
 }

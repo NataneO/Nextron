@@ -1,14 +1,16 @@
-import CustomerProfile from "./components/customerProfile";
-import CustomerNavigation from "./components/customerNavigation";
-
+import CustomerProfile from "./components/customerProfile/customerProfile";
+import CustomerNavigation from "./components/customerNavigation/customerNavigation";
+import Alert from "../../../shared/alert/alert";
+import styles from './index.module.css'
 
 export default function Customers() {
-  return (
-    <div>
-        <button className="customer__toggle-button">btn</button>
-      <div className="customer__alert">alert</div>
-     <CustomerProfile/>
-     <CustomerNavigation/>
-    </div>
-  )
+    return (
+        <div>
+            <Alert />
+            <div className={styles.customer__layout}>
+                <CustomerProfile />
+                <CustomerNavigation />
+            </div>
+        </div>
+    )
 }

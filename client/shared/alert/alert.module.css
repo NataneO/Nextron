@@ -1,0 +1,14 @@
+.customer__alert{
+    background:#f9f9f9;
+    margin: 1.5rem auto;
+    border:solid 1px #ff0000;
+    color:#ff0000;
+    border-radius:.25rem;
+    padding: 20px;
+    display: flex;
+}
+
+.customer__alert div{
+    font-weight: 200;
+    margin-left: 1rem; 
+}

@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@types/react": "^18.0.28",
-    "next": "^13.1.6"
+    "@types/react": "^18.0.28"
   }
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router';
-import { apiNextURl } from '../api'
-import { deleteCookie } from '../utils'
+import { apiNextURl } from '../../api'
+import { deleteCookie } from '../../utils'
 
 export default function Session() {
   const router = useRouter();

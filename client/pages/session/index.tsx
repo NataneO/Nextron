@@ -4,6 +4,8 @@ import { apiNextURl } from '../../api'
 import { deleteCookie } from '../../utils'
 import Header from '../../shared/header/header';
 import Customers from './customers';
+import Overview from './overview';
+import UserContext from '../../contexts/userContext';
 
 export default function Session() {
   const router = useRouter();
@@ -47,11 +49,12 @@ export default function Session() {
   }, [])
 
   return (
-    <div >
+    <UserContext.Provider value={{ user, message, isFetching }}>
       <Header />
-      <div className="wrapper"
-      >     <Customers />
+      <div className="wrapper">
+    <Overview user={user} message={message} isFetching={isFetching}/>
+        <Customers />
       </div>
-    </div>
+      </UserContext.Provider>
   )
 }

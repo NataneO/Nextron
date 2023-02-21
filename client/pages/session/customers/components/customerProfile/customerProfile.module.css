@@ -6,7 +6,7 @@
   
 .customer__info {
     width: 350px;
-    height: 400px;
+    min-height: 400px;
     background-color: #cbeabe;
     border-radius: 5px;
     box-sizing: border-box;
@@ -80,13 +80,19 @@
   
   .customer__additionalInfo {
     background-color: #fff;
-    padding: 10px;
+    padding: 30px;
     border-radius: 5px;
   }
   
   .customer__additionalInfo > div {
     display: flex;
+    padding: 10px 0;
     justify-content: space-between;
+  }
+
+  .customer__additionalInfo > div > div {
+    flex: 1;
+    text-align: center;
   }
   
   .customer__accountAgeTitle,
@@ -95,6 +101,7 @@
     margin: 0;
     color: #999;
     font-weight: 200;
+    text-align: center;
   }
 
   
@@ -104,5 +111,6 @@
     color: #444;
     margin: 0;
     font-weight: 200;
+    text-align: center;
   }
   

@@ -17,6 +17,11 @@ const nextConfig = {
         source: '/session',
         destination: '/session/index',
       },
+      {
+        source: '/overview',
+        destination: '/session/overview',
+      },
+
     ]
   },
 }

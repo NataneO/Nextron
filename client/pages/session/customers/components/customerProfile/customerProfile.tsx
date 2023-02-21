@@ -22,8 +22,8 @@ export default function CustomerProfile() {
             </button>
           </div>
           <div className={styles.customer__contactInfo}>
-          <p className={styles.customer__email}>nataneoliveira9@gmail.com</p>
-          <p className={styles.customer__telephone}>+55(11)99482-1699</p>
+            <p className={styles.customer__email}>nataneoliveira9@gmail.com</p>
+            <p className={styles.customer__telephone}>+55(11)99482-1699</p>
           </div>
         </div>
         <button className={styles.customer__addTag}>+ add a tag</button>
@@ -35,13 +35,16 @@ export default function CustomerProfile() {
             </div>
             <div>
               <h5 className={styles.customer__avgOrderValueTitle}>Average order value</h5>
-              <h5 className={styles.customer__avgOrderValue}></h5>
-            </div>
-            <div>
-              <h5 className={styles.customer__lifetimeSpendTitle}>Total lifetime spend</h5>
-              <h5 className={styles.customer__lifetimeSpend}></h5>
+              <h5 className={styles.customer__avgOrderValue}>247</h5>
             </div>
           </div>
+          <div>
+            <div>
+              <h5 className={styles.customer__lifetimeSpendTitle}>Total lifetime spend</h5>
+              <h5 className={styles.customer__lifetimeSpend}>fdsf</h5>
+            </div>
+          </div>
+
         </div>
       </article>
     </section>

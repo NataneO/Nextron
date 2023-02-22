@@ -1,0 +1,29 @@
+.customerNavigation {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .customerNavigation__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 25px 10px;
+  }
+  
+  .customerNavigation__item {
+    margin: 0 10px;
+  }
+  
+  .customerNavigation__link {
+    color: #333;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .customerNavigation__link:hover {
+    background-color: #eee;
+  }
+  

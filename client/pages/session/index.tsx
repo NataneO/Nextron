@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router';
-import { apiNextURl } from '../api'
-import { deleteCookie } from '../utils'
+import { apiNextURl } from '../../api'
+import { deleteCookie } from '../../utils'
+
 
 export default function Session() {
   const router = useRouter();
@@ -45,21 +46,6 @@ export default function Session() {
   }, [])
 
   return (
-    <div className="wrapper">
-      <h1>Welcome, {user && user.name}</h1>
-      {user && user.email}
-      <div className="message">
-        {isFetching ? 'fetching details..' : message}
-      </div>
-
-      <button
-        style={{ height: '30px' }}
-        onClick={() => {
-         handleLogout()
-        }}
-      >
-        logout
-      </button>
-    </div>
+    <><h1>Welcome, {user && user.name}</h1></>
   )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router';
-import { apiNextURl } from '../api'
+import { apiNextURl } from '../../api';
+import Link from 'next/link';
 
 export default function Register() {
   const router = useRouter();
@@ -88,7 +89,8 @@ export default function Register() {
           errors.map((error: any, id: string) => {
             return <p key={id}> &bull; {error}</p>
           })}
-      </div>
+      </div> 
+      <Link href="/login">Ja tenho uma conta</Link>
     </div>
   )
 }

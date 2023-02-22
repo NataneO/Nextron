@@ -1,0 +1,7 @@
+.customer__layout{
+    display: flex;
+    background-color: #f1f1f1;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}

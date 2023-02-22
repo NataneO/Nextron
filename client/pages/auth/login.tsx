@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import { apiNextURl } from '../api'
-import { createCookie } from '../utils'
+import { apiNextURl } from '../../api'
+import { createCookie } from '../../utils'
+import Link from 'next/link';
 
 export default function Login() {
   const router = useRouter();
@@ -78,10 +79,11 @@ export default function Login() {
           handleChange(e)
         }}
       />
-
+ <Link href="/register">Não tenho cadastro</Link>
       <button disabled={isSubmitting} onClick={() => handleSubmit()}>
         {isSubmitting ? '.....' : 'login'}
       </button>
+    
       <div className="message">{message}</div>
     </div>
   )

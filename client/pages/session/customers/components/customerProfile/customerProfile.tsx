@@ -1,9 +1,13 @@
 import styles from './customerProfile.module.css'
 import Image from 'next/image';
+import CustomerContext from '../../../../../contexts/customerContext';
+import { useContext, useState } from 'react';
 
 
 
 export default function CustomerProfile() {
+ 
+
   return (
     <section className={styles.customer__card}>
       <div className={styles.customer__location}></div>
@@ -14,8 +18,8 @@ export default function CustomerProfile() {
           </div>
           <div className={styles.customer__personalInfo}>
             <div>
-              <h1 className={styles.customer__name}>Natane Oliveira</h1>
-              <h3 className={styles.customer__username}>nataneO</h3>
+              <h1 className={styles.customer__name}>NataneO</h1>
+              <h3 className={styles.customer__username}>natnaeO</h3>
             </div>
             <button className={styles.customer__showInfo}>
               <i className="fa-solid fa-eye"></i>

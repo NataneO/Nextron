@@ -1,33 +1,38 @@
 import styles from './style.module.css'
+import CustomerContext from '../../../../../contexts/customerContext';
+import { useContext, useState } from 'react';
 
 export default function CustomerNavigation() {
+  
+  const {state, setState } = useContext(CustomerContext);
+
+  const pages = [
+    "Overview",
+    "Orders",
+    "Payment methods",
+    "Chargebacks",
+    "Locations",
+    "Devices",
+    "Sessions",
+    "Show more"
+  ];
+
+  const handleChange = (pageName: string) => {
+   setState({page:  formatString(pageName)})
+  };
+
+  function formatString(str: string) {
+    return str.toLowerCase().split(' ').map((s, i) => i === 0 ? s : s.charAt(0).toUpperCase() + s.slice(1)).join('');
+  }
+
   return (
-    <nav className={styles.customerNavigation}>
+   <nav className={styles.customerNavigation}>
       <ul className={styles.customerNavigation__list}>
-        <li className={styles.customerNavigation__item}>
-          <span className={styles.customerNavigation__link}>Overview</span>
-        </li>
-        <li className={styles.customerNavigation__item}>
-          <span className={styles.customerNavigation__link}>Orders</span>
-        </li>
-        <li className={styles.customerNavigation__item}>
-          <span className={styles.customerNavigation__link}>Payment methods</span>
-        </li>
-        <li className={styles.customerNavigation__item}>
-          <span className={styles.customerNavigation__link}>Chargebacks</span>
-        </li>
-        <li className={styles.customerNavigation__item}>
-          <span className={styles.customerNavigation__link}>Locations</span>
-        </li>
-        <li className={styles.customerNavigation__item}>
-          <span className={styles.customerNavigation__link}>Devices</span>
-        </li>
-        <li className={styles.customerNavigation__item}>
-          <span className={styles.customerNavigation__link}>Sessions</span>
-        </li>
-        <li className={styles.customerNavigation__item}>
-          <span className={styles.customerNavigation__link}>Show more</span>
-        </li>
+        {pages.map((page, index) => (
+          <li key={index} className={styles.customerNavigation__item}>
+            <span className={styles.customerNavigation__link} onClick={() => handleChange(page)}>{page}</span>
+          </li>
+        ))}
       </ul>
     </nav>
   );

@@ -18,9 +18,21 @@ const nextConfig = {
         destination: '/session/index',
       },
       {
-        source: '/overview',
-        destination: '/session/overview',
+        source: '/customers',
+        destination: '/session/customers',
       },
+      {
+        source: '/reports',
+        destination: '/session/reports',
+      },
+      {
+        source: '/leaderboard',
+        destination: '/session/leaderboard',
+      },
+      {
+        source: '/tags',
+        destination: '/session/tags',
+      }
 
     ]
   },

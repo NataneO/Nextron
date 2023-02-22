@@ -7,11 +7,11 @@ export default function Header() {
         <header className={styles.header}>
           <nav className={styles.header__nav}>
             <ul className={styles.header__list}>
-              <Link href="/" className={styles.header__item}>Overview</Link>
-              <Link href="/" className={styles.header__item}>Customers</Link>
-              <Link href="/" className={styles.header__item}>Reports</Link>
-              <Link href="/" className={styles.header__item}>Leaderboard</Link>
-              <Link href="/" className={styles.header__item}>Tags</Link>
+              <Link href="/session" className={styles.header__item}>Overview</Link>
+              <Link href="/customers" className={styles.header__item}>Customers</Link>
+              <Link href="/reports" className={styles.header__item}>Reports</Link>
+              <Link href="/leaderboard" className={styles.header__item}>Leaderboard</Link>
+              <Link href="/tags" className={styles.header__item}>Tags</Link>
             </ul>
           </nav>
         </header>

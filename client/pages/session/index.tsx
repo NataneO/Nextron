@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router';
 import { apiNextURl } from '../../api'
 import { deleteCookie } from '../../utils'
-import Header from '../../shared/header/header';
-import Customers from './customers';
-import Overview from './overview';
-import UserContext from '../../contexts/userContext';
+
 
 export default function Session() {
   const router = useRouter();
@@ -49,12 +46,6 @@ export default function Session() {
   }, [])
 
   return (
-    <UserContext.Provider value={{ user, message, isFetching }}>
-      <Header />
-      <div className="wrapper">
-    <Overview user={user} message={message} isFetching={isFetching}/>
-        <Customers />
-      </div>
-      </UserContext.Provider>
+    <><h1>Welcome, {user && user.name}</h1></>
   )
 }
